@@ -1,0 +1,286 @@
+<!--Oliver Amparo
+12/16/2021
+00316561@student.necc.edu
+table that calculates the total value of the wood plus tax and tip 
+Final project part 3
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order table</title>
+    <link rel="stylesheet" href="order_form.css" />
+    <script src="order_form.js"></script>
+  </head>
+  <body>
+    <section>
+      <!--basic nav -->
+      <nav>
+        <a href="part_2/index.html">Main</a>
+        <a href="#order_form">Home</a>
+        <a href="part_2/Firewood.html">Firewood</a>
+        <a href="part_2/Final2_Orders.html">Orders</a>
+      </nav>
+    </section>
+    <section>
+      <!-- Name of the form-->
+      <h1>Necc Wood Company Order Form</h1>
+      <table>
+        <!-- all of the headers of the table-->
+        <tr>
+          <th>Quantity</th>
+          <th>Item</th>
+          <th>Cost</th>
+          <th>Cubic feet</th>
+          <th>Total Cubic Feet</th>
+          <th>Total Cost</th>
+        </tr>
+        <tr>
+          <!--onblur event if input field loses focus then call the blu function-->
+          <td class="quan">
+            <input type="number" name="seasoned" id="first" onblur="blu()" />
+          </td>
+          <td>
+            <!--type of wood-->
+            <span> Seasoned Firewood: 1/4 cord- </span> <br />
+            20% to 25% moisture
+          </td>
+          <!--cost of the wood-->
+          <td>$ <span id="amount">269.00</span></td>
+          <td id="feet">33</td>
+          <!--multiplication fields-->
+          <td id="cub_feet" class="total">0</td>
+          <td id="total_cost" class="total_num">0</td>
+        </tr>
+
+        <tr>
+          <!--calling again a different blu function that does the same-->
+          <td class="quan">
+            <input type="number" name="seasoned" id="second" onblur="blu2()" />
+          </td>
+          <td>
+            <span> Seasoned Firewood: 1/2 cord- </span> <br />
+            20% to 25% moisture
+          </td>
+          <td>$ <span id="amount2">329.00</span></td>
+          <td id="feet2">64</td>
+          <!--calculation fields-->
+          <td id="cub_feet2" class="total">0</td>
+          <td id="total_cost2" class="total_num">0</td>
+        </tr>
+        <!--new row-->
+        <tr>
+          <td class="quan">
+            <input type="number" name="seasoned" id="thrid" onblur="blu3()" />
+          </td>
+          <td>
+            <span> Seasoned Firewood: 3/4 cord- </span> <br />
+            20% to 25% moisture
+          </td>
+          <td>$ <span id="amount3">409.00</span></td>
+          <!--the amount of wood in cubic feet-->
+          <td id="feet3">96</td>
+          <td id="cub_feet3" class="total">0</td>
+          <td id="total_cost3" class="total_num">0</td>
+        </tr>
+        <!--another row with input fields-->
+        <tr>
+          <td class="quan">
+            <input type="number" name="seasoned" id="fourth" onblur="blu4()" />
+          </td>
+          <td>
+            <!--seasoned 20% moisure-->
+            <span> Seasoned Firewood: 1 cord- </span> <br />
+            20% to 25% moisture
+          </td>
+          <td>$ <span id="amount4">459.00</span></td>
+          <!--adding more wood-->
+          <td id="feet4">128</td>
+          <td id="cub_feet4" class="total">0</td>
+          <td id="total_cost4" class="total_num">0</td>
+        </tr>
+        <!--new row. new input fields-->
+        <tr>
+          <!--calling function blur 5 on blur-->
+          <td class="quan">
+            <input type="number" name="seasoned" id="fifth" onblur="blu5()" />
+          </td>
+          <td>
+            <!--1/4 cord wood-->
+            <span> Seasoned Firewood: 1/4 cord- </span> <br />
+            35% to 40% moisture
+          </td>
+          <td>$ <span id="amount5">269.00</span></td>
+          <!--amount of cubic feet is 33-->
+          <td id="feet5">33</td>
+          <td id="cub_feet5" class="total">0</td>
+          <td id="total_cost5" class="total_num">0</td>
+        </tr>
+        <tr>
+          <td class="quan">
+            <input type="number" name="seasoned" id="sixth" onblur="blu6()" />
+          </td>
+          <td>
+            <span> Seasoned Firewood: 1/2 cord- </span> <br />
+            35% to 40% moisture
+          </td>
+          <td>$ <span id="amount6">329.00</span></td>
+          <td id="feet6">64</td>
+          <td id="cub_feet6" class="total">0</td>
+          <td id="total_cost6" class="total_num">0</td>
+        </tr>
+        <!--new row. calling blur7 function-->
+        <tr>
+          <td class="quan">
+            <input type="number" name="seasoned" id="seventh" onblur="blu7()" />
+          </td>
+          <td>
+            <span> Seasoned Firewood: 3/4 cord- </span> <br />
+            35% to 40% moisture
+          </td>
+          <!-- span to allow to calculate the fields-->
+          <td>$ <span id="amount7">409.00</span></td>
+          <td id="feet7">96</td>
+          <td id="cub_feet7" class="total">0</td>
+          <td id="total_cost7" class="total_num">0</td>
+        </tr>
+
+        <tr>
+          <td class="quan">
+            <input type="number" name="seasoned" id="eighth" onblur="blu8()" />
+          </td>
+          <td>
+            <span> Seasoned Firewood: 1 cord- </span> <br />
+            35% to 40% moisture
+          </td>
+          <td>$ <span id="amount8">459.00</span></td>
+          <td id="feet8">128</td>
+          <td id="cub_feet8" class="total">0</td>
+          <td id="total_cost8" class="total_num">0</td>
+        </tr>
+        <!-- new table row-->
+        <tr>
+          <td class="quan">
+            <input type="number" name="seasoned" id="ninth" onblur="blu9()" />
+          </td>
+          <td>
+            <!-- green firewood-->
+            <span> Green Firewood: 1/4 cord- </span> <br />
+            20% to 25% moisture
+          </td>
+          <td>$ <span id="amount9">269.00</span></td>
+          <td id="feet9">33</td>
+          <td id="cub_feet9" class="total">0</td>
+          <td id="total_cost9" class="total_num">0</td>
+        </tr>
+
+        <tr>
+          <td class="quan">
+            <input type="number" name="seasoned" id="tenth" onblur="blu10()" />
+          </td>
+          <td>
+            <!--1/2 firewood cost is 329-->
+            <span> Green Firewood: 1/2 cord- </span> <br />
+            20% to 25% moisture
+          </td>
+          <td>$ <span id="amount10">329.00</span></td>
+          <td id="feet10">64</td>
+          <!--these change when input changes focus-->
+          <td id="cub_feet10" class="total">0</td>
+          <td id="total_cost10" class="total_num">0</td>
+        </tr>
+        <tr>
+          <td class="quan">
+            <input
+              type="number"
+              name="seasoned"
+              id="eleventh"
+              onblur="blu11()"
+            />
+          </td>
+          <td>
+            <!--span to add specific style to ths area-->
+            <span> Green Firewood: 3/4 cord- </span> <br />
+            20% to 25% moisture
+          </td>
+          <!--being able to multiple values because of span-->
+          <td>$ <span id="amount11">409.00</span></td>
+          <td id="feet11">96</td>
+          <td id="cub_feet11" class="total">0</td>
+          <td id="total_cost11" class="total_num">0</td>
+        </tr>
+        <tr>
+          <td class="quan">
+            <input type="number" name="seasoned" id="twelve" onblur="blu12()" />
+          </td>
+          <td>
+            <span> Green Firewood: 1 cord- </span> <br />
+            20% to 25% moisture
+          </td>
+          <!--amount per 128 cubic feet is 459-->
+          <td>$ <span id="amount12">459.00</span></td>
+          <td id="feet12">128</td>
+          <!--multiplication fields set to 0-->
+          <td id="cub_feet12" class="total">0</td>
+          <td id="total_cost12" class="total_num">0</td>
+        </tr>
+        <tr></tr>
+        <!--calculating the total value-->
+        <div>
+          <!--area where taxes are storeed-->
+          <tr>
+            <td>Tax</td>
+            <td>10%</td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+            <!--storing the result of the calculation here-->
+            <td id="tax"></td>
+          </tr>
+          <tr>
+            <!--area where tips are stored-->
+            <td>Tip</td>
+            <td><input type="text" name="tip" id="tip1" />%</td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+
+            <td id="tip"></td>
+          </tr>
+          <tr>
+            <!--delivery amount flat number-->
+            <td>Delivery</td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <!--just a number no calculations needed-->
+            <td>5.00</td>
+          </tr>
+
+          <tr>
+            <td>Grand Total</td>
+            <td></td>
+
+            <td></td>
+            <td></td>
+            <!--the total including taxes-->
+            <td id="wood_total">0</td>
+            <td id="grand_total">0</td>
+          </tr>
+        </div>
+      </table>
+      <div id="calc">
+        <!--when calculate is pressed calculate all the data-->
+        <button type="button" onclick="calculate()">calculate</button>
+      </div>
+    </section>
+  </body>
+</html>

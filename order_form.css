@@ -1,0 +1,46 @@
+/*Oliver Amparo
+12/16/2021
+00316561@student.necc.edu
+the css for Necc Wood company order form
+Final part 3
+
+*/
+/* centering everything*/
+body {
+  text-align: center;
+  background-color: blanchedalmond;
+}
+/*making sure the table stays centered */
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+/*adding the lines */
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+/* making the type of wood bold*/
+td span {
+  font-weight: bold;
+}
+/* making the size of the input fields 40px*/
+input {
+  width: 40px;
+}
+/*head font size */
+h1 {
+  font-size: 40px;
+}
+
+/*adding left margin for the button*/
+#calc {
+  margin-left: 30%;
+}
+/*button style */
+button {
+  background-color: cornflowerblue;
+  color: cornsilk;
+}
